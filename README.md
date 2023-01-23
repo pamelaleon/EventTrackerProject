@@ -8,7 +8,7 @@ This application was created to properly implement CRUD opperations to the Dog P
 | GET       | `/api/dogprofiles`    |              | JSON of `List<DogProfiles>` |
 | GET       | `/api/dogprofiles/2` |              | JSON of `DogProfile` 2 |
 | POST      | `/api/dogprofile`    | JSON of a new `DogProfile` | JSON of created `DogProfile` |
-| PUT       | `/api/dogprofile/2` | JSON of a new version of `DogProfile` 17 | JSON of updated `DogProfile` |
+| PUT       | `/api/dogprofile/2` | JSON of a new version of `DogProfile` 2 | JSON of updated `DogProfile` |
 | DELETE    | `/api/dogprofile/2` |              | |
 
 The application is able to implement full CRUD. The user is able to create as many dog profiles as they wish and be able to save all dog personal information for future use. As I continue on developing this project I would be like to be able to add another functionality like the user can document a dogs daily activity like whether they went on a walk or they went to sleep. 

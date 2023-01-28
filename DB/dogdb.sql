@@ -52,11 +52,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `dogdb`;
-INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (1, 'Kovu', 'June 13th 2021', 1, 'Pomeranian', 11.5, 23456, 2345678, 'Taste of The Wild', '1 cup', 'Vet CIty', 'Pamela');
-INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (2, 'Kiara', 'May 26th 2022', NULL, 'Pomeranian', 4, 45678, 2346345, 'Orijen', '1/2 cup', 'Vet City', 'Pamela');
-INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (3, 'Max', 'unknown', 5, 'Mix', 20, 34920, 3029984, 'Blue', '1 -1/2 cups', 'BandField', 'Yawar');
-INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (4, 'Maya', 'unknown', 2, 'Husky', 65, 98789, 8627832, 'Blue', '2-3 cups', 'BandField', 'Rodger');
-INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (5, 'Woody', 'July 2008', NULL, 'Schnauzer', 15, 34567, 3456432, 'Blue', '1-1/2cup', 'BandField', 'Sam');
+INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (1, 'Kovu', 'June 13th 2021', 1, 'Pomeranian', 11, 456892, 34538485, 'Taste Of The Wild', '1/2 cup', 'Vet City', 'Pamela');
+INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (2, 'Kiara', 'May 26th', 8, 'Pomeranian', 4, 345567, 13456842, 'Orijen', '3/4 cup', 'Vet City', 'Pamela');
+INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (3, 'Woody', 'June 16th 2008', NULL, 'Schnauzer', 15, 574322, 24686554, 'Royal Caine', '1 cup', 'Aurora Vet', 'Rodger');
+INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (4, 'Max', '2019', 4, 'Mutt', 25, 345654, 87654325, 'Blue Buffalo ', '1 1/2 cup', 'BandField', 'Yawar');
+INSERT INTO `dog_profile` (`id`, `name`, `birthday`, `age`, `breed`, `weight`, `chip_number`, `registration_number`, `food_brand`, `amount_food`, `vet_hospital_name`, `owner_name`) VALUES (5, 'Maya', '2021', 2, 'Husky', 60, 345324, 43674345, 'Blue Buffalo', '2 1/2 cups', 'BandField', 'Rodger');
 
 COMMIT;
 

@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Dog Profile</title>
-    <script src="js/script.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <h1>Dog Profiles</h1>
+<head>
+<meta charset="utf-8">
+<title>Dog Profile</title>
+<script src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+	<h1>Dog Profiles</h1>
 
-  </body>
+	<div id="eventList">
+    <button id="displayAll" >Display All Profiles</button>
+	</div>
+	<br>
+
+	<div id="eventDetails">
+	<form name="getById">
+	<input type="number" name="dogId">
+	<button name="lookup">Get Dog Profile By Id</button>
+	</form>
+	</div>
+	<br>
+	
+	<div id="dogdata"></div>
+    <br>
+    <br>
+    
+	<div id="newEventForm">
+    <h3>Add Your Dog</h3>
+    <br>
+    <form name='newDogProfile'>
+     Name:	<input type='text' name='dogname'>
+   	<br>
+   	 Birthday: <input type='text' name='birthday'>
+   	<br>
+   	 Age: <input type='number' name='age'>
+   	<br>
+   	 Breed: <input type='text' name='breed'>
+   	<br>
+   	 Weight: <input type='number' name='weight'>
+   	<br>
+   	 Chip Number: <input type='number' name='chipNumber'>
+   	<br>
+   	 Registration Number: <input type='number' name='registrationNumber'>
+   	<br>
+   	 Food Brand: <input type='text' name='foodBrand'>
+   	<br>
+   	 Amount of Food per Day: <input type='text' name='amountFood'>
+   	<br>
+   	 Vet Hospital Name: <input type='text' name='vetHospitalName'>
+   	<br>
+   	 Owner Name: <input type='text' name='ownername'>
+   	<br>
+   	<button name="addDogProfile">Add Dog</button>
+   </form>
+	</div>
+
+
+	<div id="updateEventForm"></div>
+	<br>
+
+</body>
 </html>

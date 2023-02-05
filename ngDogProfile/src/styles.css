@@ -1,0 +1,35 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+ /* Remove the navbar's default rounded borders and increase the bottom margin */
+ .navbar {
+  outline: 8px ridge rgb(255,250,240);
+  font-size: 20px;
+  font-stretch: semi-expanded;
+  padding: 25px 40px 20px;
+  margin-bottom: 50px;
+  border-radius: 0;
+  background-color: floralwhite;
+}
+
+/* Remove the jumbotron's default bottom margin */
+ .jumbotron {
+
+  margin-bottom: 0;
+  background-image: url('https://www.capetownetc.com/wp-content/uploads/2021/11/hhk4.jpg');
+background-repeat: no-repeat;
+
+background-position: center center;
+background-size: cover;
+
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: lavenderblush;
+  padding: 25px;
+}
+
+#htmlbody{
+  background-color: honeydew;
+}

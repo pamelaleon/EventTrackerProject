@@ -1,0 +1,153 @@
+<!-- <h1>Dog Profile</h1>
+
+<ul>
+  <li *ngFor="let p of profiles">{{p.name}}</li>
+</ul> -->
+
+<head>
+  <title>The Dog House</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body id="htmlbody">
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 style="color: antiquewhite; text-shadow: 0px 2px 4px black;">The Dog House</h1>
+    <p style="color: antiquewhite; text-shadow: 0px 2px 4px black;">Every dog must have his day</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/profiles']">Profiles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/register']" >Register</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link"   [routerLink]="['/contact']" >Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['/about']" >About us</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://images.hola.com/us/images/026a-12951a6dfbfb-33075bad4092-1000/square-1200/loki-the-wolfdog.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Loki the Wolfdog</h5>
+        <p class="card-text">
+          Starting out just for fun, I decided to start an Instagram account for Loki in 2013 where we shared our travels across the western United States.
+          Our story was later picked up by numerous publishers and gave us unexpected exposure and we developed a big fat family on social media. With 2 million followers on Instagram & Facebook, our social family grew to love our adventures. </p>
+         <a href="https://lokithewolfdog.com/pages/about" class="btn btn-primary stretched-link">Visit Website</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted 06.07.2022</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://images.hola.com/us/images/026a-12951a6dfbfc-2db47b480f15-1000/square-1200/jiffpom.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> JiffPom</h5>
+        <p class="card-text">Meet Jiffpom! He holds TWO Guinness world records for his speed on only two of his four tiny legs and is also the biggest animal star with over 30 MILLION FOLLOWERS</p>
+        <a href="https://twitter.com/jiffpom?lang=en" class="btn btn-primary stretched-link"> Visit Twitter</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted 10.04.2021</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://images.hola.com/us/images/026a-12951a6dfbfd-f767edcd6fc2-1000/square-1200/crusoe.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Crusoe the Dachshund</h5>
+        <p class="card-text">Crusoe is the larger-than-life, 12 year old dachshund who rose to the ranks of internet fame through his blog, books, and numerous viral videos. What started as a blog became two New York Times Bestselling books, and what started as short viral videos made for Vine and Instagram, became his popular YouTube series with 1.6m subs and 10+ minute long episodes featuring voice-overs for the dogs, original story lines, various characters, and epic escapades.</p>
+        <a href ="https://celebritydachshund.com/" class="btn btn-primary stretched-link">Visit Website</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted 01.02.23</small>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://cdn-chanj.nitrocdn.com/bXIBtdYQdXKpuVJVxhrmUUSDLbVBwgFV/assets/images/optimized/rev-c69dbeb/wp-content/uploads/2022/04/8.-MileyJo-the-Chorkie.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Miley Jo The Chorkie</h5>
+        <p class="card-text"> MileyJo is a quirky canine fashion model with catwalk experience and over 80k followers on Instagram. Followers can access discount voucher codes for a variety of dog clothing, lifestyle and food brands.</p>
+         <a href="https://mileyjothechorkie.com/" class="btn btn-primary stretched-link">Visit Website</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted 06.07.2022</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://images.hola.com/us/images/026a-12951a6dfbfd-afde3d04ff9e-1000/square-1200/doug-the-pug.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> Doug the Pug</h5>
+        <p class="card-text">Doug loves the simple things in life. A good nose boop, a long nap. And, if we’re being honest… he also likes the perks of being the world’s most famous pug. The red carpets, the celebrity belly rubs, the designer bandanas — and, of course, the food. Pizza! Pinot! Pasta!</p>
+        <a href="https://www.dougthepug.com/" class="btn btn-primary stretched-link"> Visit Website</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted 02.03.23</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://images.hola.com/us/images/026a-12951a6dfbfe-823a53621a70-1000/square-1200/reagan-doodle.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Reagan Doodle</h5>
+        <p class="card-text">Hi, I'm Reagan...
+          Hi I am Reagan, an Australian labradoodle who loves to play, lick human faces, and believe it or not, pose for the camera.
+          Little Buddy and I met when we were both 11 months old.  We bonded instantly, and have been besties ever since.</p>
+        <a href ="https://www.reagandoodle.com/" class="btn btn-primary stretched-link">Visit Website</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Posted 12.25.22</small>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<footer class="container-fluid text-center">
+  <p>Sign Up For Our News Letter</p>
+  <form class="form-inline">
+    <input type="email" class="form-control" size="50" placeholder="Email Address">
+    <button type="button" class="btn btn-primary">Sign Up</button>
+  </form>
+</footer>
+
+</body>

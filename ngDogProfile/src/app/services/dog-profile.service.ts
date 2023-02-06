@@ -33,17 +33,17 @@ export class DogProfileService {
   //TODO: show, create, update, destroy
 
   create(dog: DogProfile):Observable<DogProfile> {
-    dog.name = '';
-    dog.birthday = '';
-    dog.age = 0;
-    dog.breed = '';
-    dog.weight = 0;
-    dog.chipNumber = 0;
-    dog.registrationNumber = 0;
-    dog.foodBrand = '';
-    dog.amountFood = '';
-    dog.vetHospitalName = '';
-    dog.ownerName = '';
+    // dog.name = '';
+    // dog.birthday = '';
+    // dog.age = 0;
+    // dog.breed = '';
+    // dog.weight = 0;
+    // dog.chipNumber = 0;
+    // dog.registrationNumber = 0;
+    // dog.foodBrand = '';
+    // dog.amountFood = '';
+    // dog.vetHospitalName = '';
+    // dog.ownerName = '';
     return this.http.post<DogProfile>(this.url, dog).pipe(
       catchError((err: any) => {
         console.log(err);

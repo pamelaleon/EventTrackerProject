@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  addDog(dog: DogProfile): void{
+  addDog(dog: DogProfile){
     console.log(dog);
     this.DogProfileService.create(dog).subscribe({
       next: () => {

@@ -1,1 +1,102 @@
-<p>contact works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/profiles']">Profiles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/register']" >Register New Profile</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link"   [routerLink]="['/contact']" >Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['/about']" >About us</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Contact Us Section -->
+    <section class="Material-contact-section section-padding section-dark" id="contact">
+      <div class="container">
+          <div class="row">
+              <!-- Section Titile -->
+              <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                  <h1 class="section-title">Love to Hear From You</h1>
+              </div>
+          </div>
+          <div class="row">
+              <!-- Section Titile -->
+              <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                <p>Contact Us!</p>
+                <p>We are always looking for feedback from our paw friends! Fill out the form if you have any questions or ideas on how we can support you and your pups!.</p>
+
+                <div class="find-widget">
+                 Company:  <a href="http://localhost:4204/home">The Dog House</a>
+                </div>
+                <div class="find-widget">
+                 Address: <a href="#">4435 Berkshire Circle Knoxville</a>
+                </div>
+                <div class="find-widget">
+                  Phone:  <a href="#">+ 6789998212 </a>
+                </div>
+
+                <div class="find-widget">
+                  Website:  <a href="http://localhost:4204/home">www.TheDogHouse</a>
+                </div>
+                <div class="find-widget">
+                   Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+                </div>
+              </div>
+              <!-- contact form -->
+              <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                  <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                      <!-- Name -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- email -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Subject -->
+                      <div class="form-group label-floating">
+                        <label class="control-label">Subject</label>
+                        <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Message -->
+                      <div class="form-group label-floating">
+                          <label for="message" class="control-label">Message</label>
+                          <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Form Submit -->
+                      <div class="form-submit mt-5">
+                          <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                          <div id="msgSubmit" class="h3 text-center hidden"></div>
+                          <div class="clearfix"></div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </section>

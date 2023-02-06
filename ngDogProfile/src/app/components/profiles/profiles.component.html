@@ -1,1 +1,236 @@
-<p>profiles works!</p>
+<html>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" >
+            <a class="nav-link" [routerLink]="['/profiles']">Profiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/login']" >Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/register']" >Register New Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"   [routerLink]="['/contact']" >Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['/about']" >About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Age</th>
+        <th>Breed</th>
+        <th>Actions <button
+          type="button"
+          class="btn btn-link btn-sm btn-rounded"
+          (click)="setAddDogProfile()"
+          >Add Dog</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of dog">
+      <td (click)="displayDog(d)">{{d.name}}</td>
+      <td (click)="displayDog(d)">{{d.birthday}}</td>
+      <td (click)="displayDog(d)" >{{d.age}}</td>
+      <td (click)="displayDog(d)">{{d.breed}}</td>
+      <td><button
+        type="button"
+        class="btn btn-link btn-sm btn-rounded" (click)="setEditTodo()">
+        Edit
+      </button>
+      <button
+      type="button"
+      class="btn btn-link btn-sm btn-rounded"
+      (click)="deleteDog(d.id)">
+      Delete
+    </button>
+  </td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+
+
+
+<section class="h-100 gradient-custom-2" *ngIf="selected">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card">
+          <div class="rounded-top text-white d-flex flex-row" style="background-color: #B0C4DE; height:200px;">
+            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+              <img src="https://cdn11.bigcommerce.com/s-aef1d/images/stencil/1200x1800/products/2761/9533/paw-0__50843.1645561005.jpg?c=2"
+              alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+              style="width: 150px; z-index: 1">
+              <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+              style="z-index: 1;">
+              Follow
+            </button>
+          </div>
+          <div class="ms-3" style="margin-top: 130px;">
+            <h3>{{selected.name}}</h3>
+            <p>{{selected.breed}}</p>
+          </div>
+        </div>
+        <div class="p-4 text-black" style="background-color: #f8f9fa;">
+          <div class="d-flex justify-content-end text-center py-1">
+            <div>
+              <p class="mb-1 h5">253</p>
+              <p class="small text-muted mb-0">Photos</p>
+            </div>
+            <div class="px-3">
+              <p class="mb-1 h5">1026</p>
+              <p class="small text-muted mb-0">Followers</p>
+              </div>
+              <div>
+                <p class="mb-1 h5">478</p>
+                <p class="small text-muted mb-0">Following</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-4 text-black">
+            <div class="mb-5">
+              <p class="lead fw-normal mb-1">About</p>
+              <div class="p-4" style="background-color: #FFFAF0;">
+                <p class="font-italic mb-1">Birthday: {{selected.birthday}}</p>
+                <p class="font-italic mb-1">Age: {{selected.age}}</p>
+                <p class="font-italic mb-0">Weight: {{selected.weight}}</p>
+                <p class="font-italic mb-0">Chip Number# {{selected.chipNumber}}</p>
+                <p class="font-italic mb-0">Registration Number# {{selected.registrationNumber}}</p>
+                <p class="font-italic mb-0">Food Brand: {{selected.foodBrand}}</p>
+                <p class="font-italic mb-0">Amount Food: {{selected.amountFood}}</p>
+                <p class="font-italic mb-0">Vet Hospital Name: {{selected.vetHospitalName}}</p>
+                <p class="font-italic mb-0">Owner Name: {{selected.ownerName}}</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="lead fw-normal mb-0">Recent photos</p>
+              <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+            </div>
+            <div class="row g-2">
+              <div class="col mb-2">
+                <img src="https://cdn.shopify.com/s/files/1/0554/6252/7165/articles/egowaving_09dad14d-9df3-4d39-8926-41944da182d9.jpg?v=1620818035"
+                alt="image 1" class="w-100 rounded-3">
+              </div>
+              <div class="col mb-2">
+                <img src="https://post.bark.co/wp-content/uploads/2018/11/61932186_321130225506124_4179539109711364671_n.jpg"
+                alt="image 1" class="w-100 rounded-3">
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="col">
+                <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2014,w_3017,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/shutterstock_485806801_mv1xuv.jpg"
+                alt="image 1" class="w-100 rounded-3">
+              </div>
+              <div class="col">
+                <img src="https://townsquare.media/site/398/files/2019/06/dogs-GettyImages-541283784.jpg?w=980&q=75"
+                alt="image 1" class="w-100 rounded-3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="card mb-4" *ngIf="editDogProfile" name="editDogProfile">
+  <div class="card-header">Edit Profile Details</div>
+  <div class="card-body">
+      <form>
+          <!-- Form Group (Dog Name)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="name">Name (how your name will appear to other users on the site)</label>
+              <input class="form-control" id="name" type="text" placeholder="name" name="editDogProfile.name" [(ngModel)]="editDogProfile.name">
+          </div>
+          <!-- Form Row-->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (birthday)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="birthday">Birthday</label>
+                  <input class="form-control" id="birthday" type="text" placeholder="birthday" [(ngModel)]="editDogProfile.birthday" name="editDogProfile.birthday">
+              </div>
+              <!-- Form Group (Age)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="age">Age</label>
+                  <input class="form-control" id="age" type="text" placeholder="Age" [(ngModel)]="editDogProfile.age" name="editDogProfile.age">
+              </div>
+          </div>
+          <!-- Form Row        -->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (Breed)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="breed">Breed</label>
+                  <input class="form-control" id="breed" type="text" placeholder="Breed" [(ngModel)]="editDogProfile.breed" name="editDogProfile.breed">
+              </div>
+              <!-- Form Group (weight)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="weight">Weight</label>
+                  <input class="form-control" id="weight" type="text" placeholder="weight" [(ngModel)]="editDogProfile.weight" name="editDogProfile.weight">
+              </div>
+          </div>
+          <!-- Form Group (Chip Number)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="chipNumber">Chip Number</label>
+              <input class="form-control" id="chipNumber" type="text" placeholder="chip number" [(ngModel)]="editDogProfile.chipNumber" name="editDogProfile.chipNumber">
+          </div>
+          <!-- Form Row-->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (Registration Number)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="registrationNumber">Registration Number</label>
+                  <input class="form-control" id="registratioNumber" type="text" placeholder="registrationNumber" [(ngModel)]="editDogProfile.registrationNumber" name="editDogProfile.registrationNumber">
+              </div>
+              <!-- Form Group (food brand)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="foodBrand">Food Brand</label>
+                  <input class="form-control" id="foodBrand" type="text" placeholder="Food Brand" [(ngModel)]="editDogProfile.foodBrand" name="editDogProfile.foodBrand">
+              </div>
+          </div>
+          <div class="row gx-3 mb-3">
+            <!-- Form Group (Amount Food)-->
+            <div class="col-md-6">
+                <label class="small mb-1" for="amountFood">Food Amount</label>
+                <input class="form-control" id="amountFood" type="text" placeholder="Food Amount" [(ngModel)]="editDogProfile.amountFood" name="editDogProfile.amountFood">
+            </div>
+            <!-- Form Group (Vet Hospital Name)-->
+            <div class="col-md-6">
+                <label class="small mb-1" for="vetHospitalName">Vet Hospital</label>
+                <input class="form-control" id="vetHospitalName" type="text" placeholder="Vet Hospital" [(ngModel)]="editDogProfile.vetHospitalName" name="editDogProfile.vetHospitalName">
+            </div>
+            <div class="col-md-6">
+              <label class="small mb-1" for="ownerName">Owner Name</label>
+              <input class="form-control" id="ownerName" type="text" placeholder="Owner Name" [(ngModel)]="editDogProfile.ownerName" name="editDogProfile.ownerName">
+          </div>
+        </div>
+          <!-- Save changes button-->
+          <button class="btn btn-success" type="button" (click)="updateDog(editDogProfile)">Save changes</button>
+          <button class="btn btn-danger" (click)="editDogProfile = null">Cancel</button>
+      </form>
+  </div>
+</div>
+
+
+
+
+
+</html>

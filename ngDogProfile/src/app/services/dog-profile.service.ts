@@ -23,7 +23,7 @@ export class DogProfileService {
         return throwError(
           () =>
             new Error(
-              'TodoService.index(): error retrieving dogprofile list: ' + err
+              'TodoService.index(): error retrieving profile list: ' + err
             )
         );
       })

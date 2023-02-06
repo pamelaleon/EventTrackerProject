@@ -1,1 +1,107 @@
-<p>register works!</p>
+<html>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/profiles']">Profiles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/register']" >Register New Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"   [routerLink]="['/contact']" >Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"[routerLink]="['/about']" >About us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="card mb-4">
+  <div class="card-header">Register A New Dog Profile</div>
+  <div class="card-body">
+      <form>
+          <!-- Form Group (Dog Name)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="name">Name (how your name will appear to other users on the site)</label>
+              <input class="form-control" id="name" type="text" placeholder="name" name="name" [(ngModel)]="newDogProfile.name">
+          </div>
+          <!-- Form Row-->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (birthday)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="birthday">Birthday</label>
+                  <input class="form-control" id="birthday" type="text" placeholder="birthday" [(ngModel)]="newDogProfile.birthday" name="birthday">
+              </div>
+              <!-- Form Group (Age)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="age">Age</label>
+                  <input class="form-control" id="age" type="number" placeholder="Age" [(ngModel)]="newDogProfile.age" name="age">
+              </div>
+          </div>
+          <!-- Form Row        -->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (Breed)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="breed">Breed</label>
+                  <input class="form-control" id="breed" type="text" placeholder="Breed" [(ngModel)]="newDogProfile.breed" name="breed">
+              </div>
+              <!-- Form Group (weight)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="weight">Weight</label>
+                  <input class="form-control" id="weight" type="number" placeholder="weight" [(ngModel)]="newDogProfile.weight" name="weight">
+              </div>
+          </div>
+          <!-- Form Group (Chip Number)-->
+          <div class="mb-3">
+              <label class="small mb-1" for="chipNumber">Chip Number</label>
+              <input class="form-control" id="chipNumber" type="number" placeholder="chip number" [(ngModel)]="newDogProfile.chipNumber" name="chipNumber">
+          </div>
+          <!-- Form Row-->
+          <div class="row gx-3 mb-3">
+              <!-- Form Group (Registration Number)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="registrationNumber">Registration Number</label>
+                  <input class="form-control" id="registratioNumber" type="number" placeholder="registrationNumber" [(ngModel)]="newDogProfile.registrationNumber" name="registrationNumber">
+              </div>
+              <!-- Form Group (food brand)-->
+              <div class="col-md-6">
+                  <label class="small mb-1" for="foodBrand">Food Brand</label>
+                  <input class="form-control" id="foodBrand" type="text" placeholder="Food Brand" [(ngModel)]="newDogProfile.foodBrand" name="foodBrand">
+              </div>
+          </div>
+          <div class="row gx-3 mb-3">
+            <!-- Form Group (Amount Food)-->
+            <div class="col-md-6">
+                <label class="small mb-1" for="amountFood">Food Amount</label>
+                <input class="form-control" id="amountFood" type="text" placeholder="Food Amount" [(ngModel)]="newDogProfile.amountFood" name="amountFood">
+            </div>
+            <!-- Form Group (Vet Hospital Name)-->
+            <div class="col-md-6">
+                <label class="small mb-1" for="vetHospitalName">Vet Hospital</label>
+                <input class="form-control" id="vetHospitalName" type="text" placeholder="Vet Hospital" [(ngModel)]="newDogProfile.vetHospitalName" name="vetHospitalName">
+            </div>
+            <div class="col-md-6">
+              <label class="small mb-1" for="ownerName">Owner Name</label>
+              <input class="form-control" id="ownerName" type="text" placeholder="Owner Name" [(ngModel)]="newDogProfile.ownerName" name="ownerName">
+          </div>
+        </div>
+          <!-- Save changes button-->
+          <button class="btn btn-success" type="button" (click)="addDog(newDogProfile)">Save changes</button>
+      </form>
+  </div>
+</div>
+
+
+</html>
